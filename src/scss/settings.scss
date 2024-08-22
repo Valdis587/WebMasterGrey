@@ -1,0 +1,142 @@
+.icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    a {
+        padding: 5px;
+        border: 1px solid $ColorWhite;
+        border-radius: 3px;
+    }
+    a:hover {
+        background-color: $ColorPrimaryLight;
+    }
+}
+.title-home {
+    @include funcAdaptiv(font-size, 25, 40);
+    line-height: 110%;
+    text-align: center;
+    margin: 50px 0 10px 0;
+    padding: 0 5px;
+}
+.desc-home {
+    text-align: center;
+    @include funcAdaptiv(font-size, 16, 20);
+    line-height: 110%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+.home-title-line {
+    position: relative;
+   margin: 30px auto 70px auto;
+}
+.home-title-line::after {
+    top: 0px;
+    z-index: 0;
+    height: 1px;
+    content: "";
+    width: 80%;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    border-top: 1px solid;
+    border-image-source: linear-gradient(90deg,transparent,rgba(143,120,255,.5) 50%,transparent);
+    border-image-slice: 1;
+    background: radial-gradient(43.9% 100% at 50% 0,rgba(157,137,255,.15) 0,rgba(1,3,20,0) 100%);
+    transform: translate(-50%, 0);
+}
+.home-title-line::before {
+    bottom: 0px;
+    height: 1px;
+  z-index: 0;
+  content: "";
+  width: 60%;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(90deg,transparent,rgba(143,120,255,.5) 50%,transparent);
+  border-image-slice: 1;
+  background: radial-gradient(50% 100% at 50% 100%,rgba(157,137,255,.1) 0,rgba(1,3,20,0) 100%);
+  transform: translate(-50%, 0);
+}
+
+.gradient-bottom {
+    background: radial-gradient(140% 107.13% at 50% 10%,transparent 37.41%,#63e 69.27%,#fff 100%);
+    border-radius: 50px;
+}
+.gradient-top {
+    border-radius: 50px;
+    background: radial-gradient(120% 120% at 50% 100%,transparent 40%,#63e 70%,#fff 100%);
+}
+.border-cart {
+    border: 1px solid $ColorBorder;
+    border-radius: 5px;
+    background: rgba(23, 24, 37, 0.75);
+}
+
+.swiper-button-prev, .swiper-button-next {
+    background-color: $ColorGrey;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $ColorWhite;
+    border-radius: 100%;
+    color: $ColorWhite;
+    transition: 0.3s all ease 0.3s;
+    @media (max-width: 460px) { 
+       display: none;
+    }
+ }
+ .swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: $ColorPrimaryLight;
+    
+ }
+ .swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 20px
+ } 
+
+ .sectionShape{ 
+    animation: sectionShape 8s linear infinite;
+    }
+    @keyframes sectionShape {
+      0%{
+        left: -50%;
+      }
+      100% {  
+        left: 100%; 
+      }
+    }
+
+
+    @keyframes rot{
+        0% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(360deg);
+        }
+      }
+      @-webkit-keyframes rot {
+        0% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(360deg);
+        }
+      }
+      .rot-item {
+        animation: 12s rot infinite ease-in-out;
+      }
+      .tag-site {
+        display: flex;
+        color: $ColorPrimary;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        font-size: 0px;
+        gap: 5px;
+        overflow-x: hidden;
+      }
+   
+

@@ -1,0 +1,60 @@
+<div class="sidebar">
+    <section class="sidebar__widget border-cart">
+        <form action="" class="sidebar__searchform">
+            <input class="sidebar__searchform-input" type="text">
+            <button class="sidebar__searchform-button"><i class="icon-search"></i></button>
+        </form>
+    </section>
+    <section class="sidebar__widget border-cart">
+        <h3 class="sidebar__title">Выполненные работы<span class="sidebar__line"></span></h3>
+        <div class="sidebar__widget-wrapper">
+            <div class="swiper sidebar__widget-prject">
+                <div class="swiper-wrapper sidebar__widget-prject-wrapp">
+                    @@include('cart-project.html', {}) 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sidebar__widget border-cart">
+        <h3 class="sidebar__title">Последние новости<span class="sidebar__line"></span></h3>
+        <div class="sidebar__widget-wrapper">
+            <ul class="sidebar__news-list">
+                <li class="sidebar__news-item">
+                    <a class="sidebar__news-img" href=""> <img src="@images/news/55555.jpg" alt=""></a>
+                    <a class="btn-line sidebar__link" href="">Начались испытания беспилотных Компания “MAN”</a>
+                </li>
+                <li class="sidebar__news-item">
+                    <a class="sidebar__news-img"  href="">  <img src="@images/news/10.jpeg" alt=""></a>
+                    <a class="btn-line sidebar__link" href="">Начались испытания беспилотных</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="sidebar__widget border-cart">
+        <h3 class="sidebar__title">Отзывы<span class="sidebar__line"></span></h3>
+        <div class="sidebar__widget-wrapper">
+            <div class="swiper sidebar__widget-reviews">
+                <div class="swiper-wrapper sidebar__widget-reviews-wrapp">
+                    @@include('cart-reviews.html', {}) 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sidebar__widget border-cart">
+        <h3 class="sidebar__title">Категории<span class="sidebar__line"></span></h3>
+        <div class="sidebar__widget-wrapper">
+            <ul class="sidebar__widget-category-list">
+                <li><i class="icon-check"></i><a href="404.html">Цены</a></li>
+                <li><i class="icon-check"></i><a href="single-uslugi.html">Лендинги</a></li>
+                <li><i class="icon-check"></i><a href="">Проекты</a></li>
+                <li><i class="icon-check"></i><a href="">Отзывы</a></li>
+            </ul>
+        </div>
+    </section>
+   
+        <section class="sidebar__widget border-cart">
+            <div id="sidebar__widget-wrapper" class="sidebar__widget-wrapper">
+                <canvas id="dance" data-src="@images/new/dence/dence.gltf"></canvas>
+            </div>
+        </section>
+</div>

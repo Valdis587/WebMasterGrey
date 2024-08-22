@@ -1,0 +1,86 @@
+.footer {
+    &__content {
+        display: grid;
+        grid-template-columns: minmax(300px, auto) 300px  300px 200px;
+        gap: 20px 10px;
+        padding: 20px 10px 40px 10px;
+        @media (max-width: 1160px) {
+            grid-template-columns: repeat(2, minmax(auto, 49.6%));
+         }
+         @media (max-width: 600px) {
+            grid-template-columns: 100%;
+         }
+    }
+    &__info {
+        @media (max-width: 1160px) {
+            order: 1;
+         }
+    }
+    &__copy {
+        padding: 10px 5px;
+        text-align: center;
+        border-top: 1px solid $ColorBorder;
+    }
+    &__contact, &__info, &__menu {
+        padding: 5px 10px;
+    }
+    &__logo {
+        padding: 0 0 20px 0;
+      img {
+        width: 70px;
+         height: 55px;
+      }
+    }
+    &__title {
+        font-size: 25px;
+        padding: 0 0 20px 0;
+        position: relative;
+    }
+    &__title::after {
+        content: "";
+        width: 100px;
+        height: 3px;
+        background-color: $ColorPrimaryLight;
+        top: 70%;
+        left: 0;
+        position: absolute;
+        border-radius: 10px;
+    }
+    &__menu-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin: 20px 0 0 0;
+        li {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            i {
+                color: $ColorPrimaryLight;
+            }
+            a:hover {
+                color: $ColorPrimaryLight;
+            }
+        }
+    }
+    & .icon-list {
+        justify-content: flex-start;
+        padding: 20px 0 0 0;
+    }
+    &__up {
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        background-color: $ColorPrimaryLight;
+        z-index: 500;
+        transform: rotate(180deg);
+        padding: 10px;
+        font-size: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+       
+    }
+    &__up-hide {
+        opacity: 0;
+    }
+}

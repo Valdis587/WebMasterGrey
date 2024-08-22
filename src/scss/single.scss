@@ -1,0 +1,95 @@
+.single {
+    &__news-img {
+        max-width: 100%;
+        overflow: hidden;
+        img {
+            border: 1px solid $ColorBorder;
+            width: 100%;
+            height: 600px;
+            border-radius: 3px;
+            transition: 0.3s all ease 0.3s;
+            @media (max-width: 970px) {
+                height: 300px;
+             }
+             @media (max-width: 460px) {
+                height: 200px;
+             }
+        }
+        img:hover {
+            transform: scale(1.08);
+            filter: grayscale(1);
+        }
+    }
+    &__news-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        i {
+            font-size: 14px;
+            color: $ColorPrimaryLight;
+        }
+    }
+    &__news-text {
+        padding: 0 5px;
+    }
+    &__news-title {
+        @include funcAdaptiv(font-size, 20, 30);
+        line-height: 110%;
+        text-align: center;
+    }
+
+    &__service-top {
+        display: grid;
+        grid-template-columns: 50% auto;
+        gap: 10px;
+        @media (max-width: 1100px) { 
+            grid-template-columns: 100%;       
+      }
+    }
+    &__service-left {
+        height: 400px;
+    }
+    &__service-right {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__service-right-title {
+        @include funcAdaptiv(font-size, 18, 22);
+        line-height: 110%;
+        text-align: center;
+    }
+    &__service-right-info {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__service-right-info-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        padding: 0 0 5px 0;
+        border-bottom: 1px solid $ColorPrimaryLight;
+    }
+    &__project-price {
+        text-align: center;
+        font-size: 30px;
+        color: $ColorPrimaryLight;
+        padding: 30px 0;
+        i {
+            font-size: 23px;
+        }
+    }
+    &__project-button-wrapp {
+       text-align: center;
+       margin: 0 0 20px 0;
+    }
+   
+}

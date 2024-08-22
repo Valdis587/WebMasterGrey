@@ -1,0 +1,32 @@
+.cart {
+    &__reviews-content {
+        display: grid;
+        grid-template-columns: 100px auto;
+        gap: 10px;
+        align-items: center;
+        padding: 5px;
+        @media (max-width: 810px) {
+           grid-template-columns: 100%;
+           text-align: center;
+         }
+    }
+    &__reviews-img {
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border: 3px solid $ColorPrimaryLight;
+        }
+    }
+    &__reviews-text {
+        display: grid;
+        grid-template-rows: 20px 20px 20px minmax(50px, auto);
+        row-gap: 5px;
+    }
+    &__reviews-name {
+        font-size: 18px;
+    }
+    &__reviews-job {
+        color: $ColorPrimaryLight;
+    }
+}

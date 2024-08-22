@@ -1,0 +1,96 @@
+@import "node_modules/swiper/swiper.scss";
+@import "node_modules/swiper/modules/effect-cube.scss";
+@import "node_modules/swiper/modules/effect-coverflow.scss";
+@import "node_modules/swiper/modules/effect-flip.scss";
+@import "node_modules/swiper/modules/effect-fade.scss";
+@import "node_modules/swiper/modules/effect-cards.scss";
+@import "node_modules/swiper/modules/navigation.scss";
+
+@import "base/null.scss";
+@import "base/mixin";
+@import "fonts";
+
+:root {
+   --ColorPrimary: #010314;
+   --ColorPrimaryLight: #8e64ff;
+   --ColorGrey: #2a2b3a;
+   --ColorGreyLight: #5e6077;
+   --ColorBlack: #000000;
+   --Colorwhite: #ffffff;
+   --ColorRed: #F40202;
+   --ColorBorder: #535760;
+   --ColorBlue: #0E0A30;
+}
+
+$minWidth: 320;
+$maxWidthContainer: 1590;
+$padding: 15;
+
+$ColorPrimary: var(--ColorPrimary);
+$ColorPrimaryLight: var(--ColorPrimaryLight);
+$ColorGrey: var(--ColorGrey);
+$ColorBlue: var(--ColorBlue);
+$ColorBlack: var(--ColorBlack);
+$ColorWhite: var(--Colorwhite);
+$ColorRed: var(--ColorRed);
+$ColorBorder: var(--ColorBorder);
+
+
+.container {
+   max-width: #{$maxWidthContainer}px;
+   padding: 0 #{$padding}px;
+   margin: 0 auto;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   overflow-x: hidden;
+}
+.content-wrapper {
+   flex-grow: 1;
+   margin: 130px 0 50px 0;
+   max-width: 100%;
+   height: 100%;
+   overflow-x: hidden;
+   z-index: 1;
+}
+
+
+footer {
+   margin-top: auto;
+}
+body {
+   background-color: #010314;
+   color: $ColorWhite;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 110%;
+}
+
+
+
+@import "./wp/wpstyle.scss";
+@import "wp/woo/woo.scss";
+
+
+@import "cursor";
+@import "settings";
+@import "btn";
+@import "menu";
+@import "home";
+@import "archive";
+@import "sidebar";
+@import "page";
+@import "single";
+@import "headpanel";
+@import "cart-news";
+@import "cart-reviews";
+@import "cart-project";
+@import "header";
+@import "footer";
+
+
