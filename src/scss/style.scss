@@ -46,8 +46,9 @@ $ColorBorder: var(--ColorBorder);
    min-height: 100%;
    display: flex;
    flex-direction: column;
-   position: relative;
    overflow-x: hidden;
+   position: relative;
+   z-index: 1;
 }
 .content-wrapper {
    flex-grow: 1;

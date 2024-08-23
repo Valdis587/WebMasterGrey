@@ -51,10 +51,10 @@
        
         .sub-menu {
             font-size: 12px;
-            line-height: 14px;
-            position: absolute;   
-           
-            top: 45px;
+            line-height: 14px;  
+            left: 50%;
+            top: 65px;
+            position: fixed;
             z-index: -100;
             padding: 10px 40px;
             width: 300px;
@@ -63,10 +63,10 @@
             opacity: 0;
             background-color: $ColorPrimary;
             border: 1px solid $ColorBorder;
-            visibility: hidden;
-            left: -50%;
-          transform: scale(0);
+            visibility: hidden;  
+         transform: scale(0);
             transition:  0.9s ease 0.9s;
+            transform: translate(-50%, 65px);
                display: flex;
                flex-direction: column;
                row-gap: 15px;
@@ -84,9 +84,9 @@
             }
             .menu-item-has-children:hover {    
                 .sub-menu {
-                    
-                    transform: translate(50%, 50%);
+                    position: fixed;
                     transform: scale(1);
+                    transform: translate(-50%, 65px);
                     opacity: 0.9;
                     visibility: visible;
                 }
