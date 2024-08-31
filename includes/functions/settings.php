@@ -40,3 +40,5 @@ function do_excerpt($string, $word_limit) {
         array_pop($words);
     echo implode(' ', $words).'';
 }
+
+

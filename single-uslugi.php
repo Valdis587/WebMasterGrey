@@ -41,5 +41,15 @@ $value = redux_post_meta( 'websitesmaster', 'uslugi' );?>
                 <div class="single__project-button-wrapp" >
                 <a  class="single__project-button btn-grey" href="https://t.me/<?php echo $websitesmaster['tg']; ?>"><i class="icon-telegram-plane"></i> Сделать заказаз</a>
                 </div>
+                <p class="tag-title">Теги:</p>
+                <ul class="single__teg">
+                        <?php 
+                       $post_id = get_the_ID();
+                       $terms = get_the_terms( $post_id, 'teg' );
+                       foreach( $terms as $tag ) { ?>
+                        <li><a aria-label="<?php echo $tag->name; ?>" href="<?php echo get_term_link( $tag->term_id ); ?>">#<?php echo $tag->name; ?></a></li>
+                      <?php }
+                        ?>
+                </ul>
 <?php do_action( 'end_wrapper_single_sidebar_right' );
 get_footer();

@@ -35,7 +35,7 @@
             color: $ColorPrimaryLight;
         }
     }
-    &__news-text {
+    &__news-text, &__news-desc, &__teg, .tag-title {
         padding: 0 5px;
     }
     &__news-title {
@@ -91,5 +91,18 @@
        text-align: center;
        margin: 0 0 20px 0;
     }
-   
+   &__teg {
+    color: $ColorPrimaryLight;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    a:hover {
+        color: $ColorWhite;
+    }
+   }
+   .tag-title {
+    @include funcAdaptiv(font-size, 20, 25);
+    line-height: 110%;
+    color: $ColorWhite;
+   }
 }

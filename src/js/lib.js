@@ -383,6 +383,69 @@ animate();
 
 }
 
+const tagPage = document.getElementById('teg-anim');
+if(tagPage) {
+   const scene = new THREE.Scene();
+   var clientWidth = document.getElementById('teg-anim-w').clientWidth;
+   //var clientHeight = document.getElementById('single__service-left').clientHeight;
+   const sizes = {
+   width: clientWidth,
+   height: 400 
+   }
+   const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
+   
+   const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true,
+      canvas: tagPage
+   });
+  
+  // scene.background = new THREE.Color(0x151515);
+   renderer.setSize(sizes.width, sizes.height);
+   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  
+   renderer.setClearColor(0xffffff, 0);
+   camera.position.set(0, 3.6, 0);
+   scene.rotation.set(3.4, 1, 3);
+   scene.position.set(0, 3.1, -27);
+   //const controls = new OrbitControls(camera, renderer.domElement);
+
+
+  
+   renderer.render(scene, camera);
+   window.addEventListener('resize', function() {
+      var clientWidth = document.getElementById('teg-anim-w').clientWidth;
+     // var clientHeight = document.getElementById('single__service-left').clientHeight;
+      var width = clientWidth;
+      var height = 400;
+      renderer.setSize(width, height);
+      });
+
+      
+   
+   const mainLight = new THREE.PointLight(0xffffff);
+   const mainLight2 = new THREE.PointLight(0xffffff);
+   mainLight.position.set(40, 15, -20);
+   mainLight2.position.set(-40, 6, 30);
+   scene.add(mainLight, mainLight2);
+   
+
+   const loader = new GLTFLoader();
+   const image = tagPage.getAttribute('data-src');
+   loader.load(image, function(gltf) {
+       scene.add(gltf.scene);
+      
+   });
+  
+   function animate() {
+     requestAnimationFrame( animate );
+  
+   scene.rotation.y+=0.01;
+     renderer.render( scene, camera );
+   }
+   animate();
+}
+
 
 
 

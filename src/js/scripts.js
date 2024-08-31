@@ -211,3 +211,13 @@ const headSlide = new Swiper('.homeslider__content', {
  }
  
  btnUp.addEventListener();
+
+
+  const elements = document.querySelector('.tag-site'); 
+  let el = elements.children;
+  for(let i=0; i < el.length; i++) {
+    el[i].removeAttribute('style');
+  }
+  
+
+

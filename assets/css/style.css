@@ -831,8 +831,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .content-wrapper {
@@ -4131,6 +4132,30 @@ p.stars.selected a:not(.active)::before {
   grid-area: item3;
 }
 
+.homeservice__content-teg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.homeservice__content-teg .homeservice__box-item {
+  max-width: 49%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 49%;
+          flex: 1 1 49%;
+}
+
+.homeservice__content-teg-anim {
+  max-width: 50%;
+  margin: 10px auto;
+}
+
 .homeservice__content-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4736,7 +4761,10 @@ p.stars.selected a:not(.active)::before {
   color: var(--ColorPrimaryLight);
 }
 
-.single__news-text {
+.single__news-text,
+.single__news-desc,
+.single__teg,
+.single .tag-title {
   padding: 0 5px;
 }
 
@@ -4811,6 +4839,25 @@ p.stars.selected a:not(.active)::before {
 .single__project-button-wrapp {
   text-align: center;
   margin: 0 0 20px 0;
+}
+
+.single__teg {
+  color: var(--ColorPrimaryLight);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.single__teg a:hover {
+  color: var(--Colorwhite);
+}
+
+.single .tag-title {
+  line-height: 110%;
+  color: var(--Colorwhite);
 }
 
 .headpanel {
@@ -5048,7 +5095,7 @@ p.stars.selected a:not(.active)::before {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 999;
+  z-index: 2000;
   background-color: var(--ColorPrimary);
   overflow-x: hidden;
 }
@@ -5275,6 +5322,10 @@ p.stars.selected a:not(.active)::before {
     font-size: calc(18px + 4 * (100vw - 320px) / 1270);
   }
 
+  .single .tag-title {
+    font-size: calc(20px + 5 * (100vw - 320px) / 1270);
+  }
+
   .headpanel__title {
     font-size: calc(25px + 15 * (100vw - 320px) / 1270);
   }
@@ -5356,8 +5407,9 @@ p.stars.selected a:not(.active)::before {
   .header__menu-list .sub-menu {
     font-size: 12px;
     line-height: 14px;
-    position: absolute;
-    top: 45px;
+    left: 50%;
+    top: 65px;
+    position: fixed;
     z-index: -100;
     padding: 10px 40px;
     width: 300px;
@@ -5367,12 +5419,14 @@ p.stars.selected a:not(.active)::before {
     background-color: var(--ColorPrimary);
     border: 1px solid var(--ColorBorder);
     visibility: hidden;
-    left: -50%;
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
     -webkit-transition: 0.9s ease 0.9s;
     transition: 0.9s ease 0.9s;
+    -webkit-transform: translate(-50%, 65px);
+        -ms-transform: translate(-50%, 65px);
+            transform: translate(-50%, 65px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5398,12 +5452,13 @@ p.stars.selected a:not(.active)::before {
   }
 
   .header__menu-list .menu-item-has-children:hover .sub-menu {
-    -webkit-transform: translate(50%, 50%);
-        -ms-transform: translate(50%, 50%);
-            transform: translate(50%, 50%);
+    position: fixed;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
+    -webkit-transform: translate(-50%, 65px);
+        -ms-transform: translate(-50%, 65px);
+            transform: translate(-50%, 65px);
     opacity: 0.9;
     visibility: visible;
   }
@@ -5468,6 +5523,11 @@ p.stars.selected a:not(.active)::before {
   .single__service-right-title {
     gap: 22px;
     width: 4;
+  }
+
+  .single .tag-title {
+    gap: 25px;
+    width: 5;
   }
 
   .headpanel__title {
@@ -5544,6 +5604,14 @@ p.stars.selected a:not(.active)::before {
 }
 
 @media (max-width: 970px) {
+  .homeservice__content-teg-anim {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
   .single__news-img img {
     height: 300px;
   }
@@ -5627,6 +5695,21 @@ p.stars.selected a:not(.active)::before {
   .homezak__content {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
+  }
+
+  .homeservice__content-teg {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .homeservice__content-teg .homeservice__box-item {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 
   .page__content {

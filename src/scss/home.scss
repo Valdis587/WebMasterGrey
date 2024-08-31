@@ -209,6 +209,34 @@
     .item3 {
         grid-area: item3;
     }
+    &__content-teg {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        @media(max-width: 810px) { 
+            flex-direction: column;
+        }
+        .homeservice__box-item {
+            max-width: 49%;
+            flex: 1 1 49%;
+
+            @media(max-width: 810px) {
+                max-width: 100%;
+                width: 100%;
+                flex: 1 1 auto;
+            }
+        }
+    }
+    &__content-teg-anim {
+        max-width: 50%;
+        margin: 10px auto;
+        @media(max-width: 970px) {
+            max-width: 100%;
+            width: 100%;
+            flex: 1 1 auto;
+        }
+    }
     &__content-box {
         display: flex;
         flex-direction: column;
