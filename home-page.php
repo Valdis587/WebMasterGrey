@@ -13,6 +13,6 @@ get_template_part('home/content', 'info');
 get_template_part('home/content', 'reviews');
 get_template_part('home/content', 'news'); ?>
 <div class="tag-site">
-<?php wp_tag_cloud( array( 'taxonomy' => 'teg' ) ); ?>
+<?php wp_tag_cloud( array( 'taxonomy' => 'tags' ) ); ?>
 </div>
 <?php get_footer();

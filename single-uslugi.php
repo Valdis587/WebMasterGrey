@@ -45,7 +45,7 @@ $value = redux_post_meta( 'websitesmaster', 'uslugi' );?>
                 <ul class="single__teg">
                         <?php 
                        $post_id = get_the_ID();
-                       $terms = get_the_terms( $post_id, 'teg' );
+                       $terms = get_the_terms( $post_id, 'tags' );
                        foreach( $terms as $tag ) { ?>
                         <li><a aria-label="<?php echo $tag->name; ?>" href="<?php echo get_term_link( $tag->term_id ); ?>">#<?php echo $tag->name; ?></a></li>
                       <?php }

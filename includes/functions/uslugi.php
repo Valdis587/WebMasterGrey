@@ -76,7 +76,7 @@ function custom_post_type_uslugi() {
         'capabilities'      => array(),
     );
 
-    register_taxonomy( 'teg', array( 'uslugi' ), $args );
+    register_taxonomy( 'tags', array( 'uslugi' ), $args );
 
 
 }

@@ -25,7 +25,7 @@ get_template_part( 'template-parts/content', 'head' );
                 'paged'	         => $paged,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'teg',
+                        'taxonomy' => 'tags',
                         'field'    => 'id',
                         'terms'    => $termId
                     )
