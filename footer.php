@@ -11,9 +11,6 @@
 global $websitesmaster;
 ?>
 </div>
-   <div class="tag-site">
-   <?php wp_tag_cloud( array( 'taxonomy' => 'teg' ) ); ?>
-</div>
 <footer class="footer gradient-bottom">
     <div class="footer__content container">
         <div class="footer__info">

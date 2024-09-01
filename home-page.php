@@ -11,5 +11,8 @@ get_template_part('home/content', 'zak');
 get_template_part('home/content', 'faq');
 get_template_part('home/content', 'info');
 get_template_part('home/content', 'reviews');
-get_template_part('home/content', 'news');
-get_footer();
+get_template_part('home/content', 'news'); ?>
+<div class="tag-site">
+<?php wp_tag_cloud( array( 'taxonomy' => 'teg' ) ); ?>
+</div>
+<?php get_footer();
